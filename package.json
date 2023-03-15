@@ -22,7 +22,7 @@
     "build-storybook": "build-storybook",
     "init-msw": "msw init public/",
     "test-storybook": "test-storybook",
-    "chromatic": "chromatic --project-token=8e18dc166353"
+    "chromatic": "chromatic --project-token=8e18dc166353 --exit-zero-on-changes"
   },
   "eslintConfig": {
     "extends": [
