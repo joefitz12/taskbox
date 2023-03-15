@@ -5,14 +5,12 @@ import store from "../lib/store";
 import { rest } from "msw";
 import { MockedState } from "./TaskList.stories";
 import { Provider } from "react-redux";
-
 import {
   fireEvent,
   within,
   waitFor,
   waitForElementToBeRemoved,
 } from "@storybook/testing-library";
-
 export default {
   component: InboxScreen,
   title: "InboxScreen",
@@ -34,7 +32,6 @@ Default.parameters = {
     ],
   },
 };
-
 Default.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
   // Waits for the component to transition from the loading state
@@ -47,7 +44,6 @@ Default.play = async ({ canvasElement }) => {
     await fireEvent.click(canvas.getByLabelText("pinTask-3"));
   });
 };
-
 export const Error = Template.bind({});
 Error.parameters = {
   msw: {
